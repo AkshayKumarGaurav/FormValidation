@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+    <label for="name">Name:</label>
+    <input type="text" formControlName="name" id="name" />
+    
+  
+    <label for="email">Email:</label>
+    <input type="email" formControlName="email" id="email" />
+  
+    <label for="password">Password:</label>
+    <input type="password" formControlName="password" id="password" />
+  
+    <label for="age">Age:</label>
+    <input type="number" formControlName="age" id="age" />
+  
+    <label for="country">Country:</label>
+    <select formControlName="country" id="country">
+      <option value="" disabled selected>Select your country</option>
+      <!-- Add country options here -->
+    </select>
+  
+    <label for="acceptance">Acceptance:</label>
+    <input type="checkbox" formControlName="acceptance" id="acceptance" />
+  
+    <button type="submit" [disabled]="!form.valid">Submit</button>
+  </form>
+  
